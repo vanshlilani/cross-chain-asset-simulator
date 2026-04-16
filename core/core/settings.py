@@ -30,7 +30,11 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", "True") == "True"
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "127.0.0.1").split(",")
+ALLOWED_HOSTS = ALLOWED_HOSTS = [
+    'cross-chain-asset-simulator.onrender.com',
+    'localhost',
+    '127.0.0.1'
+]
 
 
 # Application definition
@@ -83,9 +87,6 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-DATABASES = {    
-    'default': dj_database_url.config(default='sqlite:///db.sqlite3')
-}
 DATABASES = {
     'default': dj_database_url.config(
         default=os.environ.get("DATABASE_URL")
