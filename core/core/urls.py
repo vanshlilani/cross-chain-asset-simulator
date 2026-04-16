@@ -19,7 +19,15 @@ from django.urls import path, include
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from api.views import RegisterView
 
+from django.http import JsonResponse
+
+def home(request):
+    return JsonResponse({
+        "message": "Cross-Chain Asset Simulator API is running 🚀"
+    })
+
 urlpatterns = [
+    path('', home),
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
     ]
