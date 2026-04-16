@@ -7,21 +7,24 @@ This project is a **backend-focused REST API system** that simulates a cross-cha
 It allows users to:
 
 * Wrap assets (BTC → kBTC)
-* Simulate cross-chain transfers
+* Enable cross-chain transfers
 * Track portfolio balances
-* Fetch live crypto prices
-* Set and trigger price alerts
+* **Fetch live crypto prices**
+* **Set and trigger price alerts**
 
 ---
-### NOTE
+### Note
+
 Frontend was not implemented due to time constraints.
 However, all APIs are fully tested via Postman collection.
-
 ---
 
-## 🧠 Key Features
+## Backend is Live Hosted on - https://cross-chain-asset-simulator.onrender.com
+---
 
-### 🔐 Authentication & Authorization
+##  Key Features
+
+### 1. Authentication & Authorization
 
 * JWT-based authentication
 * User registration & login
@@ -29,7 +32,7 @@ However, all APIs are fully tested via Postman collection.
 
 ---
 
-### 💰 Asset & Portfolio Management
+### 2. Asset & Portfolio Management
 
 * Deposit assets (simulated wrapping)
 * Maintain wallet balances
@@ -37,21 +40,21 @@ However, all APIs are fully tested via Postman collection.
 
 ---
 
-### 🔁 Cross-Chain Transfer Simulation
+### 3. Cross-Chain Transfer Simulation
 
 * Simulate asset transfer between chains (Ethereum, BSC, etc.)
 * Deduct balance and record transaction history
 
 ---
 
-### 🌐 External API Integration
+### 4. External API Integration
 
 * Live crypto prices using CoinGecko API
 * Retry & timeout handling implemented
 
 ---
 
-### 🔔 Alerts System
+### 5. Alerts System
 
 * Set price alerts (e.g., BTC > 70,000)
 * Trigger alerts via API check
@@ -93,8 +96,8 @@ However, all APIs are fully tested via Postman collection.
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone <your-repo-url>
-cd <project-folder>
+git clone https://github.com/vanshlilani/cross-chain-asset-simulator
+cd cross-chain-asset-simulator
 ```
 
 ---
@@ -111,13 +114,8 @@ source venv/bin/activate
 ### 3️⃣ Install Dependencies
 
 ```bash
+cd core/
 pip install -r requirements.txt
-```
-
-If requirements.txt not present:
-
-```bash
-pip install django djangorestframework psycopg2-binary requests python-dotenv djangorestframework-simplejwt
 ```
 
 ---
@@ -199,13 +197,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
----
 
-## 👤 Create Superuser (Optional)
-
-```bash
-python manage.py createsuperuser
-```
 
 ---
 
@@ -291,47 +283,11 @@ Query params:
 ?page=1
 ```
 
----
-
-## 🔑 Authentication Usage
-
-Add header in requests:
-
-```
-Authorization: Bearer <your_token>
-```
 
 ---
 
 ## 📦 Postman Collection
 
-* Postman collection included in repository
-* Automatically stores JWT token after login
-* Covers all endpoints
-
----
-
-## 🧠 Design Decisions
-
-* Used **Asset model instead of choices** for scalability
-* Wallet tracks balances per user & asset
-* Transactions store chain info as metadata (simplified simulation)
-* External API handled via service layer
-
----
-
-## 🚧 Future Improvements
-
-* Chain-level wallet tracking (user + asset + chain)
-* Background job for alerts (Celery/Redis)
-* Caching for price API
-* Docker deployment
-* Rate limiting
-
----
-
-## 👨‍💻 Author
-
-Built as part of Backend Developer Internship Assignment.
+The Postman collection included in repositoryas a JSON format and automatically stores JWT token after login covering all endpoints
 
 ---
