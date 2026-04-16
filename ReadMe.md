@@ -13,6 +13,11 @@ It allows users to:
 * Set and trigger price alerts
 
 ---
+### NOTE
+Frontend was not implemented due to time constraints.
+However, all APIs are fully tested via Postman collection.
+
+---
 
 ## 🧠 Key Features
 
