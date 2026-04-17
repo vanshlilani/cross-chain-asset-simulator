@@ -1,8 +1,8 @@
-# 🚀 Cross-Chain Asset Simulator + Alerts System
+# Cross-Chain Asset Simulator + Alerts System
 
-## 📌 Overview
+## Overview
 
-This project is a **backend-focused REST API system** that simulates a cross-chain asset platform inspired by modern DeFi protocols.
+A **backend-focused REST API system** project that simulates a cross-chain asset platform having CRUD operations.
 
 It allows users to:
 
@@ -11,9 +11,17 @@ It allows users to:
 * Track portfolio balances
 * **Fetch live crypto prices**
 * **Set and trigger price alerts**
+---
+## Tech Stack
+
+* Backend: Django, Django REST Framework
+* Database: PostgreSQL
+* Auth: JWT (SimpleJWT)
+* External API: CoinGecko
+* Testing: Postman
 
 ---
-### Note
+## Note
 
 Frontend was not implemented due to time constraints.
 However, all APIs are fully tested via Postman collection.
@@ -27,14 +35,13 @@ However, all APIs are fully tested via Postman collection.
 ### 1. Authentication & Authorization
 
 * JWT-based authentication
-* User registration & login
 * Role-based access (`admin`, `user`)
 
 ---
 
 ### 2. Asset & Portfolio Management
 
-* Deposit assets (simulated wrapping)
+* Deposit assets 
 * Maintain wallet balances
 * View portfolio holdings
 
@@ -49,7 +56,7 @@ However, all APIs are fully tested via Postman collection.
 
 ### 4. External API Integration
 
-* Live crypto prices using CoinGecko API
+* **Live crypto prices using CoinGecko API**
 * Retry & timeout handling implemented
 
 ---
@@ -81,15 +88,6 @@ However, all APIs are fully tested via Postman collection.
 
 ---
 
-## 🧱 Tech Stack
-
-* Backend: Django, Django REST Framework
-* Database: PostgreSQL
-* Auth: JWT (SimpleJWT)
-* External API: CoinGecko
-* Testing: Postman
-
----
 
 ## ⚙️ Setup Instructions
 
